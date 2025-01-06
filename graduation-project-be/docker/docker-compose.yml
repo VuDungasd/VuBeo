@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  payment-service:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    container_name: search-service
+    restart: always
+    ports:
+      - ${INTERNAL_PORT}:${EXTERNAL_PORT}
+    env_file:
+      - .env
+    networks:
+      - shop-sport-micro
+    volumes:
+      - payment-service-data:/var/lib/payment-service
+
+volumes:
+  payment-service-data:
+
+networks:
+  shop-sport-micro:
+    external: true

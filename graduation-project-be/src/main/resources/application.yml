@@ -1,0 +1,31 @@
+server:
+  port: 8899
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27018/seo
+      host: localhost
+      port: 27018
+      database: seo
+    redis:
+      host: localhost
+      port: 6378
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
+
+application:
+  elastic:
+    port: 9200
+    host: localhost
+    scheme: http
+
+logging:
+  level:
+    org.springframework.data.mongodb.core: DEBUG
+
+jwt:
+  secret: cainaylasecretkeyvadungdemahoatestthuxemsao
+  expiration: 3600000
+  refreshExpiration: 604800000

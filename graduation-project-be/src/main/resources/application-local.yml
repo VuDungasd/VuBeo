@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27018/seo
+      host: localhost
+      port: 27018
+      database: seo
+    redis:
+      host: localhost
+      port: 6378
+
+application:
+  elastic:
+    port: 9200
+    host: localhost
+    scheme: http
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: ERROR
+    com.ptit.graduation.repository: ERROR
